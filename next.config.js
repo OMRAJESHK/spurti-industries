@@ -7,6 +7,9 @@ const nextConfig = {
       "mars.jpl.nasa.gov",
       "images-assets.nasa.gov",
       "youtube.com",
+      "upload.wikimedia.org",
     ],
   },
 };
+
+module.exports = nextConfig;

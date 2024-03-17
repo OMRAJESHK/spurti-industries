@@ -4,6 +4,10 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 
+/* React Slick */
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
