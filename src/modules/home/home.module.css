@@ -1,0 +1,85 @@
+.home-wrapper {
+  margin: 0rem 0rem 0rem 0rem;
+  width: 100%;
+}
+.wrapper {
+  margin: 4rem 2rem 4rem 2rem;
+}
+.about-image-wrapper {
+  flex-basis: 40%;
+}
+.about-description-img {
+  width: 100%;
+  height: 23rem;
+  object-fit: cover;
+}
+.about-description-wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 56%;
+  text-align: justify;
+}
+.about-description-title {
+  color: black;
+  margin-bottom: 1.5rem;
+}
+.about-description-text {
+  font-size: 16px;
+  margin-bottom: 1.5rem;
+}
+.about-know-more-button {
+  padding: 1rem;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  width: 10rem;
+  letter-spacing: 1px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: grey;
+}
+
+.about-know-more-button:hover {
+  box-shadow: 5px 5px 5px lightcoral;
+}
+
+/* 
+  CSS Solution
+  @property --num {
+  syntax: "<integer>";
+  initial-value: 0;
+  inherits: false;
+}
+
+.div {
+  animation: counter 5s infinite alternate ease-in-out;
+  counter-reset: num var(--num);
+  transition: --num 5s;
+}
+
+.div::after {
+  content: counter(num);
+}
+
+@keyframes counter {
+  from {
+    --num: 0;
+  }
+  to {
+    --num: 100;
+  }
+} */
+
+.counter {
+  font-size: 1.25rem;
+}
+
+.score-img {
+  width: 80px;
+  height: auto;
+}
+
+.score-wrapper{
+  width: fit-content;
+}

@@ -1,0 +1,11 @@
+.contactus-form-wrapper {
+  flex-basis: 50%;
+}
+.contactus-map-wrapper {
+  flex-basis: 49%;
+}
+.map-img {
+  width: 100%;
+  height: 23rem;
+  object-fit: cover;
+}

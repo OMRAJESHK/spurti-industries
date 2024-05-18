@@ -4,6 +4,12 @@ import { Montserrat } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/navbar";
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import classess from "./page.module.css";
+
+import Head from "next/head";
+
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
@@ -19,9 +25,23 @@ export const metadata = {
 function RootLayout({ children }) {
   return (
     <html lang="en">
+      <Head>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          charset="UTF-8"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css"
+        />
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css"
+        />
+      </Head>
+
       <body className={montserrat.className}>
         <Navbar />
-        <main>{children}</main>
+        <main className={classess.main}>{children}</main>
       </body>
     </html>
   );
