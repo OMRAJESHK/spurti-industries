@@ -1,0 +1,33 @@
+.footer-wrapper {
+  background-color: var(--primary-color);
+  height: 20rem;
+  padding: 4rem 2rem 2rem 8rem;
+}
+.footer-company-title,
+.footer-title {
+  color: var(--light);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.footer-address-wrapper,
+.footer-contacts-wrapper {
+  width: 20rem;
+  color: var(--light);
+}
+.footer-address-wrapper p {
+  font-size: 1rem;
+  line-height: 1.45;
+}
+.footer-item-wrapper:first-child {
+  flex-grow: 2;
+}
+.footer-item-wrapper {
+  flex-grow: 1;
+  height: 100%;
+}
+
+.footer-contacts-wrapper p {
+  line-height: 2;
+}

@@ -5,7 +5,7 @@ import classes from "./navbar.module.css";
 const Navbar = (props) => {
   return (
     <div className={classes["nav-wrapper"]}>
-      <div className={classes["grad-bar"]}></div>
+      <div className={classes["grad-bar"]} />
       <nav className={classes["navbar"]}>
         <img
           className={classes["logo-image"]}
