@@ -2,145 +2,62 @@
 
 import React from "react";
 import Slider from "react-slick";
+import map from "../../asset/images/spurthiMap.png";
+import computer from "../../asset/images/computer.jpg";
+import classes from "./carousel.module.css";
+import CustomImage from "../customImage";
+import Button from "../button/button";
+import { carousels } from "./constants";
+import CarouselItem from "./carouselItem";
 
-import CustomImage from "../image/customImage";
-import classess from "./carousel.module.css";
+import ArrowLeft from "./arrowLeft";
+import ArrowRight from "./arrowRight";
 
 const Carousel = () => {
   const settings = {
     dots: true,
-    infinite: true,
+    infinite: false,
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
+    initialSlide: 0,
+    prevArrow: <ArrowLeft />,
+    nextArrow: <ArrowRight />,
+    // responsive: [
+    //   {
+    //     breakpoint: 1024,
+    //     settings: {
+    //       slidesToShow: 3,
+    //       slidesToScroll: 3,
+    //       infinite: true,
+    //       dots: true,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 600,
+    //     settings: {
+    //       slidesToShow: 2,
+    //       slidesToScroll: 2,
+    //       initialSlide: 2,
+    //     },
+    //   },
+    //   {
+    //     breakpoint: 480,
+    //     settings: {
+    //       slidesToShow: 1,
+    //       slidesToScroll: 1,
+    //     },
+    //   },
+    // ],
   };
   return (
-    <div>
+    <div className={classes["slider-wrapper"]}>
       <Slider {...settings}>
-        <div style={{ display: "block", background: "green" }}>
-          <h3>
-            1111111111111111111111111111111111111111111111111111111111111111111111111
-          </h3>
-        </div>
-        <div>
-          <h3>2</h3>
-        </div>
-        <div>
-          <h3>3</h3>
-        </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
+        {carousels.map((carousel) => (
+          <CarouselItem key={carousel.id} {...carousel} />
+        ))}
       </Slider>
     </div>
-    // <div className="carousel">
-    //   <div className="carousel-inner">
-    //     <input
-    //       className={`${classess["carousel-open"]} ${classess["carousel-1"]}`}
-    //       type="radio"
-    //       id="carousel-1"
-    //       name="carousel"
-    //       aria-hidden="true"
-    //       hidden=""
-    //       checked="checked"
-    //     />
-    //     <div className={classess["carousel-item"]}>
-    //       <img src="http://fakeimg.pl/2000x800/0079D8/fff/?text=Without" />
-    //     </div>
-    //     <input
-    //       className={`${classess["carousel-open"]} ${classess["carousel-2"]}`}
-    //       type="radio"
-    //       id="carousel-2"
-    //       name="carousel"
-    //       aria-hidden="true"
-    //       hidden=""
-    //     />
-    //     <div className="carousel-item">
-    //       <img src="http://fakeimg.pl/2000x800/DA5930/fff/?text=JavaScript" />
-    //     </div>
-    //     <input
-    //       className={`${classess["carousel-open"]} ${classess["carousel-3"]}`}
-    //       type="radio"
-    //       id="carousel-3"
-    //       name="carousel"
-    //       aria-hidden="true"
-    //       hidden=""
-    //     />
-    //     <div className={classess["carousel-item"]}>
-    //       <img
-    //         src="http://fakeimg.pl/2000x800/F90/fff/?text=Carousel"
-    //         alt="carosel_3
-    //       "
-    //       />
-    //     </div>
-    //     <label
-    //       htmlFor="carousel-3"
-    //       className={`${classess["carousel-control"]} ${classess["prev"]} ${classess["control-1"]}`}
-    //     >
-    //       ‹
-    //     </label>
-    //     <label
-    //       htmlFor="carousel-2"
-    //       className={`${classess["carousel-control"]} ${classess["next"]} ${classess["control-1"]}`}
-    //     >
-    //       ›
-    //     </label>
-    //     <label
-    //       htmlFor="carousel-1"
-    //       className={`${classess["carousel-control"]} ${classess["prev"]} ${classess["control-2"]}`}
-    //     >
-    //       ‹
-    //     </label>
-    //     <label
-    //       htmlFor="carousel-3"
-    //       className={`${classess["carousel-control"]} ${classess["next"]} ${classess["control-2"]}`}
-    //     >
-    //       ›
-    //     </label>
-    //     <label
-    //       htmlFor="carousel-2"
-    //       className={`${classess["carousel-control"]} ${classess["prev"]} ${classess["control-3"]}`}
-    //     >
-    //       ‹
-    //     </label>
-    //     <label htmlFor="carousel-1" className="carousel-control next control-3">
-    //       ›
-    //     </label>
-    //     <ol className="carousel-indicators">
-    //       <li>
-    //         <label
-    //           htmlFor="carousel-1"
-    //           className={`${classess["carousel-bullet"]}`}
-    //         >
-    //           •
-    //         </label>
-    //       </li>
-    //       <li>
-    //         <label
-    //           htmlFor="carousel-2"
-    //           className={`${classess["carousel-bullet"]}`}
-    //         >
-    //           •
-    //         </label>
-    //       </li>
-    //       <li>
-    //         <label
-    //           htmlFor="carousel-3"
-    //           className={`${classess["carousel-bullet"]}`}
-    //         >
-    //           •
-    //         </label>
-    //       </li>
-    //     </ol>
-    //   </div>
-    // </div>
   );
 };
 

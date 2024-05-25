@@ -3,7 +3,7 @@
   width: 100%;
 }
 .wrapper {
-  margin: 4rem 2rem 4rem 2rem;
+  padding: 10rem 5rem 5rem 5rem;
 }
 .about-image-wrapper {
   flex-basis: 40%;
@@ -20,7 +20,7 @@
   text-align: justify;
 }
 .about-description-title {
-  color: black;
+  color: var(--primary-color);
   margin-bottom: 1.5rem;
 }
 .about-description-text {
@@ -28,20 +28,8 @@
   margin-bottom: 1.5rem;
 }
 .about-know-more-button {
-  padding: 1rem;
-  font-size: 14px;
-  font-weight: 700;
-  text-transform: uppercase;
-  width: 10rem;
+  width: fit-content;
   letter-spacing: 1px;
-  cursor: pointer;
-  border: none;
-  border-radius: 5px;
-  background-color: grey;
-}
-
-.about-know-more-button:hover {
-  box-shadow: 5px 5px 5px lightcoral;
 }
 
 /* 
@@ -80,6 +68,20 @@
   height: auto;
 }
 
-.score-wrapper{
+.score-wrapper {
   width: fit-content;
+}
+.score-wrapper h3 {
+  color: var(--primary-color);
+}
+.socialmedia-wrapper {
+  margin: 0px;
+  background-color: var(--primary-color);
+  padding: 2rem;
+}
+
+.socialmedia-text {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #fff;
 }

@@ -5,6 +5,9 @@ import CustomImage from "@/components/customImage";
 import spurtiMap from "../../../asset/images/spurthiMap.png";
 import Wrapper from "@/modules/home/common/wrapper";
 import classes from "./contactUs.module.css";
+import Input from "@/components/input/input";
+import Textarea from "@/components/input/textarea";
+import Button from "@/components/button/button";
 
 const INITIAL_STATE = { name: "", email: "", message: "" };
 
@@ -19,44 +22,47 @@ const ContactUs = () => {
 
   const onSubmitHandler = (event) => {
     event.preventDefault();
-    console.log("kdhgfdsjhf", query);
-
     setQuery(INITIAL_STATE);
   };
 
   return (
     <Wrapper>
-      <Flexbox>
+      <Flexbox gap={0} justifyContent="space-between">
         <div className={classes["contactus-form-wrapper"]}>
-          <h2>Feel Free to Contact Us for any Queries.</h2>
+          <h2 className={classes["contactus-title"]}>
+            Contact Us for any Queries
+          </h2>
           <form onSubmit={onSubmitHandler}>
-            <label htmlFor="name">Name : </label>
-            <input
+            <Input
+              label="Name :"
               name="name"
               required
               type="text"
               value={query.name}
               onChange={onChangeHandler}
-              className=""
+              placeholder="enter you name..."
             />
-            <label htmlFor="email">Email : </label>
-            <input
+            <Input
+              label="Email :"
               name="email"
               type="email"
               required
               value={query.email}
               onChange={onChangeHandler}
+              placeholder="enter you email..."
             />
             <br />
-            <label htmlFor="message">Message : </label>
-            <textarea
+            <Textarea
+              label="Messagse :"
               name="message"
-              rows={4}
-              required
               value={query.message}
+              required
               onChange={onChangeHandler}
+              placeholder="enter you query..."
             />
-            <button type="submit">Send</button>
+            <div className={classes["button-wrapper"]}>
+              <Button label="Send" type="submit" />
+            </div>
           </form>
         </div>
         <div className={classes["contactus-map-wrapper"]}>

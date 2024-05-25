@@ -19,6 +19,7 @@ const CounterWrapper = ({
     >
       <CustomImage src={src} classProp={classes["score-img"]} />
       <div>
+        <h3>{title}</h3>
         <CountUp
           start={start}
           end={end}
@@ -26,7 +27,6 @@ const CounterWrapper = ({
           className={classes["counter"]}
           suffix="+"
         />
-        <h3>{title}</h3>
       </div>
     </Flexbox>
   );

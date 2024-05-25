@@ -1,0 +1,21 @@
+.input-wrapper {
+  display: block;
+  margin-bottom: 0.85rem;
+}
+.label {
+  color: var(--primary-color);
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+.input,
+.textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 5px;
+  border: 1px solid #2d2d2d;
+}
+.input {
+  height: 2.5rem;
+}

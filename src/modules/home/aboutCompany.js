@@ -4,6 +4,7 @@ import React from "react";
 import computer from "../../asset/images/computer.jpg";
 import classes from "./home.module.css";
 import Wrapper from "./common/wrapper";
+import Button from "@/components/button/button";
 
 const AboutCompany = () => {
   return (
@@ -42,7 +43,10 @@ const AboutCompany = () => {
           more recently with desktop publishing software like Aldus PageMaker
           including versions of Lorem Ipsum.
         </p>
-        <button className={classes["about-know-more-button"]}>Know More</button>
+        <Button
+          label="Know More"
+          classProp={classes["about-know-more-button"]}
+        />
       </div>
     </Wrapper>
   );

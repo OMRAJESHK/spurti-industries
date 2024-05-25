@@ -5,7 +5,6 @@ import Wrapper from "./common/wrapper";
 import classes from "./home.module.css";
 import ticksvg from "../../asset/svgs/tick.svg";
 import usersvg from "../../asset/svgs/user.svg";
-import CustomImage from "@/components/customImage";
 import Flexbox from "@/components/flexbox/flexbox";
 import CounterWrapper from "./common/counterWrapper";
 
