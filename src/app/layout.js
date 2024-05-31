@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import classess from "./page.module.css";
 
 import Head from "next/head";
+import SocialMedia from "@/modules/home/socialMedia";
 
 const montserrat = Montserrat({
   weight: ["400", "500", "600", "700"],
@@ -40,6 +41,7 @@ function RootLayout({ children }) {
       </Head>
 
       <body className={montserrat.className}>
+        <SocialMedia />
         <Navbar />
         <main className={classess.main}>{children}</main>
       </body>
