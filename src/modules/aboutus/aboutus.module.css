@@ -1,0 +1,66 @@
+.whoweare-image-wrapper {
+  width: 25rem;
+}
+.whoweare-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.whoweare-Wrapper {
+  height: auto;
+}
+.whoweare-Wrapper p {
+  margin: 2rem 0px;
+  text-align: justify;
+  text-indent: 3rem;
+}
+
+.whychoose-wrapper {
+  width: 60%;
+  height: 10rem;
+  margin-bottom: 10rem;
+}
+
+.whychoose-wrapper section {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.why-choose-item-wrapper {
+  width: 65%;
+  height: 10rem;
+}
+.why-choose-item-wrapper section {
+  margin-bottom: 2rem;
+}
+
+.why-choose-section p {
+  text-align: left;
+  line-height: 1.3;
+  margin-bottom: 10px;
+}
+
+.whoweare-title {
+  margin: 2rem 0rem;
+  text-align: left;
+}
+.whoweare-Wrapper ul {
+  margin: 1rem 3rem;
+  line-height: 2;
+}
+
+.card-img {
+  width: 5rem;
+  height: auto;
+}
+
+.aboutus-wrapper strong {
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+.bg-primary {
+  background-color: var(--primary-color);
+  padding: 5rem !important;
+}
