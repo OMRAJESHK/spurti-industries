@@ -1,44 +1,48 @@
 "use client";
 import React from "react";
-import CountUp from "react-countup";
 import Wrapper from "./common/wrapper";
 import classes from "./home.module.css";
 import ticksvg from "../../asset/svgs/tick.svg";
 import usersvg from "../../asset/svgs/user.svg";
+import project from "../../asset/svgs/project.svg";
+import calender from "../../asset/svgs/calender.svg";
 import Flexbox from "@/components/flexbox/flexbox";
 import CounterWrapper from "./common/counterWrapper";
 
 const CompanyScore = () => {
   return (
-    <Wrapper>
-      <Flexbox justifyContent="space-between">
+    <Wrapper classProp={classes["company-scorelist-wrapper"]}>
+      <Flexbox
+        justifyContent="space-between"
+        classProp={classes["company-scorelist-wrapper"]}
+      >
         <CounterWrapper
           start={0}
           end={50}
           duration={6}
-          src={ticksvg}
-          title="Years Of Experience"
+          src={calender}
+          title="Years of Experience"
         />
         <CounterWrapper
           start={0}
           end={500}
           duration={7}
-          src={ticksvg}
-          title="Years Of Projects"
+          src={project}
+          title="Number of Projects"
         />
         <CounterWrapper
           start={0}
           end={100}
           duration={8}
           src={ticksvg}
-          title="Number Of Clients"
+          title="Number of Clients"
         />
         <CounterWrapper
           start={100}
           end={1000}
           duration={10}
           src={usersvg}
-          title="Number Of Customers"
+          title="Number of Customers"
         />
       </Flexbox>
     </Wrapper>
