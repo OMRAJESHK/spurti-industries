@@ -4,14 +4,12 @@ import AboutCompany from "./aboutCompany";
 import CompanyScore from "./companyScore";
 import ContactUs from "../common/contactUs/contactUs";
 import Carousel from "@/components/carousel/carousel";
-import SocialMedia from "./socialMedia";
 import Footer from "../common/footer/footer";
 import Copyrights from "../common/copyrights";
 
 const Home = () => {
   return (
     <div className={classess["home-wrapper"]}>
-      <SocialMedia />
       <Carousel />
       <AboutCompany />
       <CompanyScore />
