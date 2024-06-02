@@ -1,40 +1,49 @@
+"use client";
 import React from "react";
 import PropTypes from "prop-types";
 import classes from "./navbar.module.css";
+import Link from "next/link";
+import CustomImage from "../customImage";
+import logo from "../../asset/images/spurthi-industries-logo.png";
+import Flexbox from "../flexbox/flexbox";
+import { navbars } from "./common";
+import { usePathname } from "next/navigation";
 
 const Navbar = (props) => {
+  const pathname = usePathname();
+
   return (
     <div className={classes["nav-wrapper"]}>
-      <div className={classes["grad-bar"]} />
       <nav className={classes["navbar"]}>
-        <img
-          className={classes["logo-image"]}
-          src="https://upload.wikimedia.org/wikipedia/en/thumb/c/c8/Bluestar_%28bus_company%29_logo.svg/1280px-Bluestar_%28bus_company%29_logo.svg.png"
-          alt="Company Logo"
-        />
+        <Flexbox justifyContent="flex-start" alignItems="center" gap={10}>
+          <CustomImage
+            src={logo}
+            alt="logo"
+            width={100}
+            height={100}
+            classProp={classes["logo-img"]}
+          />
+          <span className={classes["logo-title"]}>Spurthi Industries</span>
+        </Flexbox>
         <div className={classes["menu-toggle"]} id="mobile-menu">
           <span className={classes["bar"]}></span>
           <span className={classes["bar"]}></span>
           <span className={classes["bar"]}></span>
         </div>
         <ul className={classes["nav"]}>
-          <li className={classes["nav-item"]}>
-            <a href="#">Home</a>
-          </li>
-          <li className={classes["nav-item"]}>
-            <a href="#">About</a>
-          </li>
-          <li className={classes["nav-item"]}>
-            <a href="#">Work</a>
-          </li>
-          <li className={classes["nav-item"]}>
-            <a href="#">Careers</a>
-          </li>
-          <li className={classes["nav-item"]}>
-            <a href="#">Contact Us</a>
-          </li>
+          {navbars.map((navItem) => (
+            <li key={navItem.id}>
+              <Link
+                className={`${classes["nav-item"]} ${pathname === navItem.path ? classes["nav-active"] : ""}`}
+                href={navItem.path}
+              >
+                {navItem.label}
+              </Link>
+            </li>
+          ))}
         </ul>
       </nav>
+      <div className={classes["grad-bar"]} />
     </div>
   );
 };

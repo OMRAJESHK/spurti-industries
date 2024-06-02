@@ -1,0 +1,13 @@
+.contactus-section-wrapper strong {
+  color: var(--primary-color);
+  letter-spacing: 1px;
+}
+
+.card-img {
+  width: 5rem;
+  margin-right: 5px;
+  margin-bottom: 20px;
+  color: var(--light);
+  height: auto;
+  vertical-align: middle;
+}

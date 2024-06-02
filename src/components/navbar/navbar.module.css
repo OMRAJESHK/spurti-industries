@@ -25,20 +25,36 @@
 }
 
 .navbar img {
-  height: 16px;
-  width: auto;
+  height: 50px;
+  width: 50px;
   justify-self: start;
   margin-left: 20px;
+}
+.logo-title {
+  vertical-align: super;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .navbar ul {
   list-style: none;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   justify-self: end;
+  align-self: end;
+  height: 100%;
+  padding-top: 10px;
+}
+
+.navbar ul li {
+  height: 100%;
 }
 
 .nav-item a {
+  height: 100%;
   color: #000;
   font-size: 0.9rem;
   font-weight: 400;
@@ -47,9 +63,14 @@
 }
 
 .nav-item a:hover {
-  color: #3498db;
+  color: var(--primary-color);
 }
 
+.nav-active {
+  font-weight: 600;
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--primary-color);
+}
 .menu-toggle .bar {
   width: 25px;
   height: 3px;

@@ -1,29 +1,29 @@
-import map from "../../asset/images/spurthiMap.png";
-import computer from "../../asset/images/computer.jpg";
+import img1 from "../../asset/images/image-13.jpg";
+import img2 from "../../asset/images/image-2.jpg";
+import img3 from "../../asset/images/image-5.jpg";
 
 export const carousels = [
   {
     id: 1,
-    title: "Our Quality Philosophy",
-    text: `The overlay CSS property specifies whether an element appearing in the top layer is actually rendered in the top
-        layer. This property is only relevant within a list of transition-property values, and only if allow-discrete.`,
-    image: computer,
+    title: "Our Principles",
+    text: `Quality and precession are the fundamental principles of our Organization.`,
+    image: img1,
     hasButton: true,
     buttonLabel: "Know More",
   },
   {
     id: 2,
-    title: "Our Manufaturing Location",
-    text: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. When an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting`,
-    image: map,
-    hasButton: true,
+    title: "Certified For",
+    text: `ISO 9001-2015 Certified | Udhyam Registration Certificate - UDYAM-KR-03-0143003`,
+    image: img2,
+    hasButton: false,
     buttonLabel: "Explore",
   },
   {
     id: 2,
-    title: "Our Lorem Ipsum",
-    text: `It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English.`,
-    image: computer,
+    title: "Wide Range of List covers",
+    text: `Our category ranges from Gold Platting, Nickel Plating, to Tri Alloy Plating and many more.`,
+    image: img3,
     hasButton: false,
     buttonLabel: "More",
   },
