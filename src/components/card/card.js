@@ -1,8 +1,7 @@
+/* eslint-disable react/display-name */
 import React from "react";
 import PropTypes from "prop-types";
 import classes from "./card.module.css";
-import Image from "next/image";
-import CustomImage from "../customImage";
 
 const Card = (props) => {
   const { classProp = "", width, styleProp = {}, children } = props;
@@ -23,6 +22,13 @@ Card.Body = ({ children }) => (
   <div className={classes["goalcard-body"]}>{children}</div>
 );
 
-Card.propTypes = {};
+Card.propTypes = {
+  children: PropTypes.node,
+  width: PropTypes.string,
+  styleProp: PropTypes.object,
+  classProp: PropTypes.string,
+};
+Card.Header.propTypes = { children: PropTypes.node };
+Card.Body.propTypes = { children: PropTypes.node };
 
 export default Card;
