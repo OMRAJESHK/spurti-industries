@@ -22,9 +22,9 @@ const Goals = () => {
             </Card.Header>
             <Card.Body>
               <p>
-                Our Commitmentment is to understand and exceed the expectation
+                {`Our Commitmentment is to understand and exceed the expectation
                 of our valued customers, while delevering high quality product,
-                services, and solution to their most demanding requirements.
+                services, and solution to their most demanding requirements.`}
               </p>
             </Card.Body>
           </Card>
@@ -37,9 +37,9 @@ const Goals = () => {
             </Card.Header>
             <Card.Body>
               <p>
-                Our Mission is to assure our customer's success by providing
+                {`Our Mission is to assure our customer's success by providing
                 them the best manufacturing solutions and delivering superior
-                quality products on time.
+                quality products on time.`}
               </p>
             </Card.Body>
           </Card>
@@ -55,9 +55,9 @@ const Goals = () => {
             </Card.Header>
             <Card.Body>
               <p>
-                our vision is to be the company for our customers and employess.
+                {`our vision is to be the company for our customers and employess.
                 to provide innovative solutions using the best technology and
-                people assuring stability and longevity.
+                people assuring stability and longevity.`}
               </p>
             </Card.Body>
           </Card>
