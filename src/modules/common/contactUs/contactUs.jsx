@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import Flexbox from "@/components/flexbox/flexbox";
 import CustomImage from "@/components/customImage";
-import spurtiMap from "../../../asset/images/spurthiMap.png";
+import spurtiMap from "../../../asset/images/si-in-maps.png";
 import Wrapper from "@/modules/home/common/wrapper";
 import classes from "./contactUs.module.css";
 import Input from "@/components/input/input";
@@ -66,7 +66,7 @@ const ContactUs = () => {
           </form>
         </div>
         <div className={classes["contactus-map-wrapper"]}>
-          <a href="https://maps.app.goo.gl/KFkbwFq1iaRAuER26" target="_blank">
+          <a href="https://maps.app.goo.gl/7VsijBR47TnpjwhZ6" target="_blank">
             <CustomImage
               src={spurtiMap}
               alt="logo"

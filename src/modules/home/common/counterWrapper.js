@@ -15,11 +15,10 @@ const CounterWrapper = ({
     <Flexbox
       flexDirection="row"
       alignItems="center"
-      classProp={classes["score-wrapper"]}
+      classProp={classes["score-item-wrapper"]}
     >
       <CustomImage src={src} classProp={classes["score-img"]} />
       <div>
-        <h3>{title}</h3>
         <CountUp
           start={start}
           end={end}
@@ -27,6 +26,7 @@ const CounterWrapper = ({
           className={classes["counter"]}
           suffix="+"
         />
+        <h5 className={classes["score-title"]}>{title}</h5>
       </div>
     </Flexbox>
   );

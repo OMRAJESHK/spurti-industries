@@ -3,6 +3,8 @@ import PropTypes from "prop-types";
 import CustomImage from "../customImage";
 import Button from "../button/button";
 import classes from "./carousel.module.css";
+import { useRouter } from "next/navigation";
+import { pageRoutes } from "@/routes/routes";
 
 const CarouselItem = (props) => {
   const {
@@ -12,6 +14,10 @@ const CarouselItem = (props) => {
     buttonLabel,
     image,
   } = props;
+  const router = useRouter();
+  const onKnoMoreClickHandler = () => {
+    router.push(pageRoutes.aboutus, { scroll: false });
+  };
   return (
     <div className={classes["slider-item-wrapper"]}>
       <div className={classes["slider-img-wrapper"]}>
@@ -20,7 +26,9 @@ const CarouselItem = (props) => {
             <div>
               <h2 className={classes["slider-title"]}>{title}</h2>
               <p className={classes["slider-text"]}>{text}</p>
-              {hasButton && <Button label={buttonLabel} />}
+              {hasButton && (
+                <Button label={buttonLabel} onClick={onKnoMoreClickHandler} />
+              )}
             </div>
           </div>
         </div>
