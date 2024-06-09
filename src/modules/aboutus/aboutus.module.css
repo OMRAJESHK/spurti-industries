@@ -85,7 +85,7 @@
 .certificate-carditem,
 .award-carditem {
   height: 6rem;
-  width: 100%;
+  width: 90%;
   padding: 1rem;
   display: flex;
   flex-grow: 1;
