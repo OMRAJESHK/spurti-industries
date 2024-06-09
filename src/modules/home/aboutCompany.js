@@ -20,8 +20,8 @@ const AboutCompany = () => {
         <CustomImage
           src={aboutImg}
           alt="logo"
-          width={300}
-          height={300}
+          width={400}
+          height={400}
           classProp={classes["about-description-img"]}
         />
       </div>

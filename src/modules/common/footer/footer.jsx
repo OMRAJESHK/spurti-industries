@@ -2,35 +2,35 @@ import Flexbox from "@/components/flexbox/flexbox";
 import React from "react";
 import classes from "./footer.module.css";
 import CustomImage from "@/components/customImage";
-import facebookIcon from "../../../asset/svgs/facebook.svg";
-import linkedinIcon from "../../../asset/svgs/linkedIn.svg";
-import twitterIcon from "../../../asset/svgs/twitter.svg";
-import mailIcon from "../../../asset/svgs/mail.svg";
+import { locationDetails } from "./data";
+
+const GetSocialLinks = ({ icons }) => {
+  return Object.keys(icons).map((icon) => (
+    <CustomImage key={icon} src={icons[icon]} classProp={classes["card-img"]} />
+  ));
+};
 
 const Footer = () => {
+  const { mail, mobile, address, title, mediaLinksIcons } = locationDetails;
   return (
     <Flexbox gap={10} classProp={classes["footer-wrapper"]}>
       <div className={classes["footer-item-wrapper"]}>
-        <h2 className={classes["footer-company-title"]}>Spurthi Industries</h2>
+        <h2 className={classes["footer-company-title"]}>{title}</h2>
         <div className={classes["footer-address-wrapper"]}>
-          <p>Opposite to Vijaya Vidyut udyog</p>
-          <p>168/1 Machohalli Bangalore - 560091</p>
+          <p>{address}</p>
         </div>
       </div>
       <div className={classes["footer-item-wrapper"]}>
         <h2 className={classes["footer-title"]}>Quick Contacts</h2>
         <div className={classes["footer-contacts-wrapper"]}>
-          <p>Mail : spurthi_industries2003@yahoo.co.in</p>
-          <p>Mobile : +91 9844130388</p>
+          <p>{mail}</p>
+          <p>{mobile}</p>
         </div>
       </div>
       <div className={classes["footer-item-wrapper"]}>
         <h2 className={classes["footer-title"]}>Social Media Links</h2>
-        <div className={classes["footer-contacts-wrapper"]}>
-          <CustomImage src={facebookIcon} classProp={classes["card-img"]} />
-          <CustomImage src={linkedinIcon} classProp={classes["card-img"]} />
-          <CustomImage src={twitterIcon} classProp={classes["card-img"]} />
-          <CustomImage src={mailIcon} classProp={classes["card-img"]} />
+        <div className={classes["footer-social-links-wrapper"]}>
+          <GetSocialLinks icons={mediaLinksIcons} />
         </div>
       </div>
     </Flexbox>

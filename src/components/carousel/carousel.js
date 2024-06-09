@@ -2,11 +2,7 @@
 
 import React from "react";
 import Slider from "react-slick";
-import map from "../../asset/images/spurthiMap.png";
-import computer from "../../asset/images/computer.jpg";
 import classes from "./carousel.module.css";
-import CustomImage from "../customImage";
-import Button from "../button/button";
 import { carousels } from "./constants";
 import CarouselItem from "./carouselItem";
 
