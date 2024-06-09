@@ -1,6 +1,7 @@
 import img1 from "../../asset/images/image-13.jpg";
 import img2 from "../../asset/images/image-2.jpg";
-import img3 from "../../asset/images/image-5.jpg";
+import img6 from "../../asset/images/image-6.jpeg";
+import img12 from "../../asset/images/image-12.jpeg";
 
 export const carousels = [
   {
@@ -15,7 +16,7 @@ export const carousels = [
     id: 2,
     title: "Certified For",
     text: `ISO 9001-2015 Certified | Udhyam Registration Certificate - UDYAM-KR-03-0143003`,
-    image: img2,
+    image: img6,
     hasButton: false,
     buttonLabel: "Explore",
   },
@@ -23,7 +24,7 @@ export const carousels = [
     id: 2,
     title: "Wide Range of List covers",
     text: `Our category ranges from Gold Platting, Nickel Plating, to Tri Alloy Plating and many more.`,
-    image: img3,
+    image: img12,
     hasButton: false,
     buttonLabel: "More",
   },

@@ -5,6 +5,13 @@ import Wrapper from "../home/common/wrapper";
 import Copyrights from "../common/copyrights";
 import Footer from "../common/footer/footer";
 import ContactUs from "../common/contactUs/contactUs";
+import classes from "./productlist.module.css";
+
+import CustomImage from "@/components/customImage";
+import ArrowLeft from "@/components/carousel/arrowLeft";
+import ArrowRight from "@/components/carousel/arrowRight";
+import { imageGallery } from "./data";
+import img2 from "../../asset/images/image-2.jpeg";
 
 const Productlist = () => {
   const [nav1, setNav1] = useState(null);
@@ -23,32 +30,180 @@ const Productlist = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
+    prevArrow: <ArrowLeft />,
+    nextArrow: <ArrowRight />,
   };
 
   return (
     <>
       <Wrapper>
-        <h1>Under Progress...!</h1>
-        <div className="slider-container">
-          <Slider {...settings}>
-            <div>
-              <h3>1</h3>
+        <div className={classes["product-wrapper"]}>
+          <Slider
+            asNavFor={nav2}
+            ref={(slider) => (sliderRef1 = slider)}
+            {...settings}
+          >
+            {/* {imageGallery.map((imageItem) => (
+              <div
+                key={imageItem.id}
+                className={classes["product-main-img-wrapper"]}
+              >
+                <CustomImage
+                  src={img2}
+                  alt="logo"
+                  width={550}
+                  height={550}
+                  classProp={classes["product-img"]}
+                />
+              </div>
+            ))} */}
+            {imageGallery.map((imageItem) => (
+              <div
+                key={imageItem.id}
+                className={classes["product-main-img-wrapper"]}
+              >
+                <CustomImage
+                  src={imageItem.src}
+                  alt="logo"
+                  width={700}
+                  height={700}
+                  classProp={classes["product-img"]}
+                />
+              </div>
+            ))}
+
+            {/*<div className={classes["product-main-img-wrapper"]}>
+              <CustomImage
+                src={img1}
+                alt="logo"
+                width={550}
+                height={250}
+                classProp={classes["product-img"]}
+              />
             </div>
-            <div>
-              <h3>2</h3>
+            <div className={classes["product-main-img-wrapper"]}>
+              <CustomImage
+                src={img2}
+                alt="logo"
+                width={550}
+                height={250}
+                classProp={classes["product-img"]}
+              />
             </div>
-            <div>
-              <h3>3</h3>
+            <div className={classes["product-main-img-wrapper"]}>
+              <CustomImage
+                src={img3}
+                alt="logo"
+                width={550}
+                height={250}
+                classProp={classes["product-img"]}
+              />
             </div>
-            <div>
-              <h3>4</h3>
+            <div className={classes["product-main-img-wrapper"]}>
+              <CustomImage
+                src={img4}
+                alt="logo"
+                width={550}
+                height={250}
+                classProp={classes["product-img"]}
+              />
             </div>
-            <div>
-              <h3>5</h3>
+            <div className={classes["product-main-img-wrapper"]}>
+              <CustomImage
+                src={img5}
+                alt="logo"
+                width={550}
+                height={250}
+                classProp={classes["product-img"]}
+              />
             </div>
-            <div>
-              <h3>6</h3>
+            <div className={classes["product-main-img-wrapper"]}>
+              <CustomImage
+                src={img6}
+                alt="logo"
+                width={550}
+                height={250}
+                classProp={classes["product-img"]}
+              />
+            </div> */}
+          </Slider>
+          <Slider
+            asNavFor={nav1}
+            ref={(slider) => (sliderRef2 = slider)}
+            slidesToShow={5}
+            swipeToSlide={true}
+            focusOnSelect={true}
+            prevArrow={<ArrowLeft />}
+            nextArrow={<ArrowRight />}
+          >
+            {imageGallery.map((imageItem) => (
+              <div
+                key={imageItem.id}
+                className={classes["product-thumbnail-wrapper"]}
+              >
+                <CustomImage
+                  src={imageItem.src}
+                  alt="logo"
+                  width={100}
+                  height={100}
+                  classProp={classes["product-thumbnail-img"]}
+                />
+              </div>
+            ))}
+            {/*<div className={classes["product-thumbnail-wrapper"]}>
+              <CustomImage
+                src={img1}
+                alt="logo"
+                width={100}
+                height={100}
+                classProp={classes["product-thumbnail-img"]}
+              />
             </div>
+            <div className={classes["product-thumbnail-wrapper"]}>
+              <CustomImage
+                src={img2}
+                alt="logo"
+                width={100}
+                height={100}
+                classProp={classes["product-thumbnail-img"]}
+              />
+            </div>
+            <div className={classes["product-thumbnail-wrapper"]}>
+              <CustomImage
+                src={img3}
+                alt="logo"
+                width={100}
+                height={100}
+                classProp={classes["product-thumbnail-img"]}
+              />
+            </div>
+            <div className={classes["product-thumbnail-wrapper"]}>
+              <CustomImage
+                src={img4}
+                alt="logo"
+                width={100}
+                height={100}
+                classProp={classes["product-thumbnail-img"]}
+              />
+            </div>
+            <div className={classes["product-thumbnail-wrapper"]}>
+              <CustomImage
+                src={img5}
+                alt="logo"
+                width={100}
+                height={100}
+                classProp={classes["product-thumbnail-img"]}
+              />
+            </div>
+            <div className={classes["product-thumbnail-wrapper"]}>
+              <CustomImage
+                src={img6}
+                alt="logo"
+                width={100}
+                height={100}
+                classProp={classes["product-thumbnail-img"]}
+              />
+            </div> */}
           </Slider>
         </div>
       </Wrapper>

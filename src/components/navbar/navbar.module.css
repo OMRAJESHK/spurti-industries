@@ -15,98 +15,10 @@
   -moz-animation: gradbar 15s ease infinite;
   animation: gradbar 15s ease infinite;
 }
-
-.navbar {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  align-items: center;
-  height: 50px;
-  overflow: hidden;
-}
-
-.navbar img {
-  height: 50px;
-  width: 50px;
-  justify-self: start;
-  margin-left: 20px;
-}
-.logo-title {
-  vertical-align: super;
-  color: var(--primary-color);
-  font-weight: 600;
-  font-size: 1.25rem;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-}
-
-.navbar ul {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  justify-self: end;
-  align-self: end;
-  height: 100%;
-  padding-top: 10px;
-}
-
-.navbar ul li {
-  height: 100%;
-}
-
-.nav-item a {
-  height: 100%;
-  color: #000;
-  font-size: 0.9rem;
-  font-weight: 400;
-  text-decoration: none;
-  transition: color 0.3s ease-out;
-}
-
-.nav-item a:hover {
-  color: var(--primary-color);
-}
-
 .nav-active {
-  font-weight: 600;
+  font-weight: bold;
   color: var(--primary-color);
   border-bottom: 2px solid var(--primary-color);
-}
-.menu-toggle .bar {
-  width: 25px;
-  height: 3px;
-  background-color: #3f3f3f;
-  margin: 5px auto;
-  -webkit-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-
-.menu-toggle {
-  justify-self: end;
-  margin-right: 25px;
-  display: none;
-}
-
-.menu-toggle:hover {
-  cursor: pointer;
-}
-
-#mobile-menu.is-active .bar:nth-child(2) {
-  opacity: 0;
-}
-
-#mobile-menu.is-active .bar:nth-child(1) {
-  -webkit-transform: translateY(8px) rotate(45deg);
-  -ms-transform: translateY(8px) rotate(45deg);
-  -o-transform: translateY(8px) rotate(45deg);
-  transform: translateY(8px) rotate(45deg);
-}
-
-#mobile-menu.is-active .bar:nth-child(3) {
-  -webkit-transform: translateY(-8px) rotate(-45deg);
-  -ms-transform: translateY(-8px) rotate(-45deg);
-  -o-transform: translateY(-8px) rotate(-45deg);
-  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* KEYFRAME ANIMATIONS */
@@ -149,49 +61,88 @@
 
 /* Media Queries */
 
-/* Mobile Devices - Phones/Tablets */
+.logo-title {
+  vertical-align: super;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 1.25rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
 
-@media only screen and (max-width: 720px) {
-  .features {
-    flex-direction: column;
-    padding: 50px;
+.logo-img {
+  width: 3rem;
+  height: 3rem;
+}
+
+.nav {
+  padding: 0.5rem;
+  width: 100%;
+  background-color: var(--light);
+  display: flex;
+  align-items: center;
+}
+.nav > .nav-header {
+  flex: 0.95;
+  padding-left: 1rem;
+}
+
+.nav > .nav-list {
+  display: flex;
+  gap: 2rem;
+}
+.nav > .nav-list > li {
+  list-style-type: none;
+}
+.nav > .nav-list > li a {
+  text-decoration: none;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-weight: 500;
+}
+.nav > input.nav-check {
+  display: none;
+}
+@media (max-width: 780px) {
+  .nav > .nav-btn {
+    display: inline-block;
+    position: absolute;
+    right: 0;
+    padding-top: 0.2rem;
   }
-
-  /* MOBILE NAVIGATION */
-
-  .navbar ul {
+  .nav > .nav-btn > label {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    padding: 13px;
+  }
+  .nav > .nav-btn > label > span {
+    display: block;
+    width: 25px;
+    height: 10px;
+    border-top: 2px solid var(--primary-color);
+  }
+  .nav > .nav-list {
+    position: absolute;
     display: flex;
     flex-direction: column;
-    position: fixed;
-    justify-content: start;
-    top: 55px;
-    background-color: #fff;
+    gap: 1rem;
     width: 100%;
-    height: calc(100vh - 55px);
-    transform: translate(-101%);
-    text-align: center;
+    background-color: var(--light);
+    height: 0;
+    transition: all 0.3s ease-in;
+    top: 9rem;
+    left: 0;
     overflow: hidden;
+    padding-left: 2rem;
   }
-
-  .navbar li {
-    padding: 15px;
+  .nav > .nav-list > li {
+    width: 100%;
+    margin-top: 1.5rem;
+    text-align: center;
   }
-
-  .navbar li:first-child {
-    margin-top: 50px;
-  }
-
-  .navbar li a {
-    font-size: 1rem;
-  }
-
-  .menu-toggle,
-  .bar {
-    display: block;
-    cursor: pointer;
-  }
-
-  .mobile-nav {
-    transform: translate(0%) !important;
+  .nav > .nav-check:checked ~ .nav-list {
+    height: calc(100vh - 50px);
+    z-index: 2;
   }
 }

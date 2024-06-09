@@ -10,10 +10,14 @@ import commitmentIcon from "../../asset/svgs/commitment.svg";
 
 const Goals = () => {
   return (
-    <Wrapper classProp={classes["bg-primary"]}>
-      <section className={classes["aboutus-wrapper"]}>
-        <Flexbox justifyContent="space-between">
-          <Card>
+    <Wrapper classProp={classes["aboutus-wrapper"]}>
+      <section className={classes["aboutus-section-wrapper"]}>
+        <Flexbox
+          gap={10}
+          justifyContent="space-between"
+          classProp={classes["goal-card-wrapper"]}
+        >
+          <Card classProp={classes["goal-carditem"]}>
             <Card.Header>
               <CustomImage src={goalIcon} classProp={classes["card-img"]} />
               <div>
@@ -28,7 +32,7 @@ const Goals = () => {
               </p>
             </Card.Body>
           </Card>
-          <Card>
+          <Card classProp={classes["goal-carditem"]}>
             <Card.Header>
               <CustomImage src={missionIcon} classProp={classes["card-img"]} />
               <div>
@@ -43,7 +47,7 @@ const Goals = () => {
               </p>
             </Card.Body>
           </Card>
-          <Card>
+          <Card classProp={classes["goal-carditem"]}>
             <Card.Header>
               <CustomImage
                 src={commitmentIcon}

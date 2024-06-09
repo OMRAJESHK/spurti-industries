@@ -1,5 +1,5 @@
 .whoweare-image-wrapper {
-  width: 25rem;
+  width: 22rem;
 }
 .whoweare-img {
   width: 100%;
@@ -10,26 +10,27 @@
 .whoweare-Wrapper {
   height: auto;
 }
-.whoweare-Wrapper p {
+
+.para {
   margin: 2rem 0px;
   text-align: justify;
   text-indent: 3rem;
+  width: initial;
 }
-
 .whychoose-wrapper {
-  width: 60%;
-  height: 10rem;
-  margin-bottom: 10rem;
+  width: 85%;
+  height: auto;
+  position: relative;
 }
 
 .whychoose-wrapper section {
   margin-bottom: 2rem;
-  width: 100%;
+  width: 60%;
 }
 
 .why-choose-item-wrapper {
-  width: 65%;
-  height: 10rem;
+  width: 100%;
+  height: auto;
 }
 .why-choose-item-wrapper section {
   margin-bottom: 2rem;
@@ -46,7 +47,7 @@
   text-align: left;
 }
 .whoweare-Wrapper ul {
-  margin: 1rem 3rem;
+  margin: 1rem 2rem;
   line-height: 2;
 }
 
@@ -55,12 +56,144 @@
   height: auto;
 }
 
-.aboutus-wrapper strong {
+.aboutus-section-wrapper strong {
   color: var(--primary-color);
   letter-spacing: 1px;
 }
 
-.bg-primary {
+.aboutus-wrapper {
   background-color: var(--primary-color);
-  padding: 5rem !important;
+  padding: 1rem !important;
+}
+
+.goal-card-wrapper {
+  flex-direction: column !important;
+}
+.goal-carditem {
+  width: 100%;
+}
+
+.rewards-wrapper {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  margin: 2rem 0px;
+}
+
+.certificate-carditem,
+.award-carditem {
+  height: 6rem;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  flex-grow: 1;
+  background: var(--primary-color);
+  color: var(--light);
+  align-items: center;
+}
+.certificate-carditem p,
+.award-carditem p {
+  font-weight: 500;
+  font-size: 0.85rem;
+  width: 100%;
+  text-align: center;
+  line-height: 1.3;
+}
+.award-title {
+  margin: 1rem 0px 0.5rem 0rem;
+}
+
+.imgviewer-wrapper {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.685);
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: block;
+  overflow-y: hidden;
+  overflow-x: hidden;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imgviewer {
+  height: 90%;
+  width: auto;
+  background-color: var(--light);
+}
+.imgviewer button {
+  padding: 0.5rem 0.95rem;
+  border: none;
+  background: none;
+  border-radius: 5%;
+  color: var(--primary-color);
+  cursor: pointer;
+  font-size: 1.6rem;
+}
+.imgviewer h2 {
+  padding: 1rem 0.4rem;
+  color: var(--primary-color);
+}
+.imgviewer img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+@media (min-width: 320px) {
+  /* smartphones, iPhone, portrait 480x320 phones */
+}
+@media (min-width: 481px) {
+  /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */
+  .rewards-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+  }
+}
+@media (min-width: 641px) {
+  /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */
+  .goal-carditem {
+    width: 45%;
+    height: 22rem;
+  }
+  .goal-card-wrapper {
+    flex-direction: row !important;
+  }
+}
+@media (min-width: 961px) {
+  /* tablet, landscape iPad, lo-res laptops ands desktops */
+
+  .whychoose-wrapper {
+    flex-basis: 40%;
+    height: 10rem;
+    margin-bottom: 1rem;
+  }
+  .aboutus-wrapper {
+    padding: 5rem !important;
+  }
+  .goal-carditem {
+    width: 30%;
+    height: 20rem;
+  }
+
+  .certificate-carditem,
+  .award-carditem {
+    width: auto;
+  }
+}
+@media (min-width: 1025px) {
+  /* big landscape tablets, laptops, and desktops */
+  .whoweare-image-wrapper {
+    width: 25rem;
+  }
+}
+@media (min-width: 1281px) {
+  /* hi-res laptops and desktops */
+  .why-choose-item-wrapper {
+    width: 40%;
+  }
 }

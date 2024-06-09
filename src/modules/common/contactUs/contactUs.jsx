@@ -66,7 +66,7 @@ const ContactUs = () => {
           </form>
         </div>
         <div className={classes["contactus-map-wrapper"]}>
-          <a href="https://maps.app.goo.gl/7VsijBR47TnpjwhZ6" target="_blank">
+          <a href="https://maps.app.goo.gl/VxLm7YjLbtb7bRh96" target="_blank">
             <CustomImage
               src={spurtiMap}
               alt="logo"

@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import PropTypes from "prop-types";
 import classes from "./navbar.module.css";
 import Link from "next/link";
 import CustomImage from "../customImage";
@@ -9,28 +8,38 @@ import Flexbox from "../flexbox/flexbox";
 import { navbars } from "./common";
 import { usePathname } from "next/navigation";
 
-const Navbar = (props) => {
+const Navbar = () => {
   const pathname = usePathname();
 
   return (
-    <div className={classes["nav-wrapper"]}>
-      <nav className={classes["navbar"]}>
-        <Flexbox justifyContent="flex-start" alignItems="center" gap={10}>
-          <CustomImage
-            src={logo}
-            alt="logo"
-            width={100}
-            height={100}
-            classProp={classes["logo-img"]}
-          />
-          <span className={classes["logo-title"]}>Spurthi Industries</span>
-        </Flexbox>
-        <div className={classes["menu-toggle"]} id="mobile-menu">
-          <span className={classes["bar"]}></span>
-          <span className={classes["bar"]}></span>
-          <span className={classes["bar"]}></span>
+    <header>
+      <nav className={classes["nav"]}>
+        <input
+          type="checkbox"
+          id="nav-check"
+          className={classes["nav-check"]}
+        />
+        <div className={classes["nav-header"]}>
+          <Flexbox justifyContent="flex-start" alignItems="center" gap={10}>
+            <CustomImage
+              src={logo}
+              alt="logo"
+              width={100}
+              height={100}
+              classProp={classes["logo-img"]}
+            />
+            <span className={classes["logo-title"]}>Spurthi Industries</span>
+          </Flexbox>
         </div>
-        <ul className={classes["nav"]}>
+        <div className={classes["nav-btn"]}>
+          <label htmlFor="nav-check">
+            <span></span>
+            <span></span>
+            <span></span>
+          </label>
+        </div>
+
+        <ul className={classes["nav-list"]}>
           {navbars.map((navItem) => (
             <li key={navItem.id}>
               <Link
@@ -43,8 +52,7 @@ const Navbar = (props) => {
           ))}
         </ul>
       </nav>
-      <div className={classes["grad-bar"]} />
-    </div>
+    </header>
   );
 };
 

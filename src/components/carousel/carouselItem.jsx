@@ -36,7 +36,7 @@ const CarouselItem = (props) => {
           src={image}
           alt="logo"
           width={650}
-          height={250}
+          height={650}
           classProp={classes["slider-img"]}
         />
       </div>

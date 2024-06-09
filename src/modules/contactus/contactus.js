@@ -10,6 +10,7 @@ import CustomImage from "@/components/customImage";
 import mailIcon from "../../asset/svgs/mail.svg";
 import phoneIcon from "../../asset/svgs/phone.svg";
 import addressIcon from "../../asset/svgs/address.svg";
+import { locationDetails } from "../common/footer/data";
 
 const Contactus = () => {
   return (
@@ -17,7 +18,7 @@ const Contactus = () => {
       <Wrapper>
         <section className={classes["contactus-section-wrapper"]}>
           <Flexbox justifyContent="space-between" gap={20}>
-            <Card styleProp={{ width: "25rem" }}>
+            <Card classProp={classes["contact-card-item"]}>
               <Card.Header>
                 <CustomImage
                   src={addressIcon}
@@ -30,11 +31,10 @@ const Contactus = () => {
                 </div>
               </Card.Header>
               <Card.Body>
-                <p>Opposite to Vijaya Vidyut udyog</p>
-                <p>168/1 Machohalli Bangalore - 560091</p>
+                <p>{locationDetails.address}</p>
               </Card.Body>
             </Card>
-            <Card styleProp={{ width: "25rem" }}>
+            <Card classProp={classes["contact-card-item"]}>
               <Card.Header>
                 <CustomImage src={phoneIcon} classProp={classes["card-img"]} />
                 <div>
@@ -42,10 +42,10 @@ const Contactus = () => {
                 </div>
               </Card.Header>
               <Card.Body>
-                <p> +91 9844130388</p>
+                <p>{locationDetails.mobile}</p>
               </Card.Body>
             </Card>
-            <Card styleProp={{ width: "25rem" }}>
+            <Card classProp={classes["contact-card-item"]}>
               <Card.Header>
                 <CustomImage src={mailIcon} classProp={classes["card-img"]} />
                 <div>
@@ -53,7 +53,7 @@ const Contactus = () => {
                 </div>
               </Card.Header>
               <Card.Body>
-                <p>spurthi_industries2003@yahoo.co.in</p>
+                <p className={classes["mail-text"]}>{locationDetails.mail}</p>
               </Card.Body>
             </Card>
           </Flexbox>
