@@ -109,6 +109,13 @@
   }
 }
 
+@media (max-width: 780px) {
+  .arrow-left span,
+  .arrow-right span {
+    width: 10px;
+    height: 10px;
+  }
+}
 @media (min-width: 320px) {
   /* smartphones, iPhone, portrait 480x320 phones */
 }
