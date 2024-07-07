@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import classes from "./navbar.module.css";
 import Link from "next/link";
 import CustomImage from "../customImage";
@@ -10,6 +10,9 @@ import { usePathname } from "next/navigation";
 
 const Navbar = () => {
   const pathname = usePathname();
+  const [isToggle, setIsToggle] = useState(false);
+
+  const toggle = () => setIsToggle(!isToggle);
 
   return (
     <header>
@@ -18,6 +21,8 @@ const Navbar = () => {
           type="checkbox"
           id="nav-check"
           className={classes["nav-check"]}
+          checked={isToggle}
+          onChange={toggle}
         />
         <div className={classes["nav-header"]}>
           <Flexbox justifyContent="flex-start" alignItems="center" gap={10}>
@@ -45,6 +50,7 @@ const Navbar = () => {
               <Link
                 className={`${classes["nav-item"]} ${pathname === navItem.path ? classes["nav-active"] : ""}`}
                 href={navItem.path}
+                onClick={toggle}
               >
                 {navItem.label}
               </Link>

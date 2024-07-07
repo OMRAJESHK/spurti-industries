@@ -8,6 +8,7 @@ import classes from "./contactUs.module.css";
 import Input from "@/components/input/input";
 import Textarea from "@/components/input/textarea";
 import Button from "@/components/button/button";
+import { fields, getFormUrl } from "./constants";
 
 const INITIAL_STATE = { name: "", email: "", message: "" };
 
@@ -20,8 +21,9 @@ const ContactUs = () => {
     setQuery((prev) => ({ ...prev, ...query }));
   };
 
-  const onSubmitHandler = (event) => {
+  const onSubmitHandler = async (event) => {
     event.preventDefault();
+
     setQuery(INITIAL_STATE);
   };
 
