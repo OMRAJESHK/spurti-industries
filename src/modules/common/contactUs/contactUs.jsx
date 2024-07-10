@@ -8,12 +8,14 @@ import classes from "./contactUs.module.css";
 import Input from "@/components/input/input";
 import Textarea from "@/components/input/textarea";
 import Button from "@/components/button/button";
-import { fields, getFormUrl } from "./constants";
+import Notification from "./notification";
+import { ProdBaseURL } from "@/routes/routes";
 
 const INITIAL_STATE = { name: "", email: "", message: "" };
 
 const ContactUs = () => {
   const [query, setQuery] = useState(INITIAL_STATE);
+  const [formResponse, setFormResponse] = useState({ open: false });
 
   const onChangeHandler = (event) => {
     const { name, value } = event.target;
@@ -23,7 +25,12 @@ const ContactUs = () => {
 
   const onSubmitHandler = async (event) => {
     event.preventDefault();
-
+    const postResponse = await fetch(`${ProdBaseURL}/api/contactus`, {
+      method: "POST",
+      body: JSON.stringify(query),
+    });
+    const result = await postResponse.json();
+    setFormResponse({ ...result, open: true });
     setQuery(INITIAL_STATE);
   };
 
@@ -42,7 +49,7 @@ const ContactUs = () => {
               type="text"
               value={query.name}
               onChange={onChangeHandler}
-              placeholder="enter you name..."
+              placeholder="enter you name"
             />
             <Input
               label="Email :"
@@ -51,7 +58,7 @@ const ContactUs = () => {
               required
               value={query.email}
               onChange={onChangeHandler}
-              placeholder="enter you email..."
+              placeholder="enter you email"
             />
             <br />
             <Textarea
@@ -60,9 +67,15 @@ const ContactUs = () => {
               value={query.message}
               required
               onChange={onChangeHandler}
-              placeholder="enter you query..."
+              placeholder="enter you query"
             />
-            <div className={classes["button-wrapper"]}>
+            <div className={classes["form-footer-wrapper"]}>
+              <Notification
+                open={formResponse.open}
+                message={formResponse.message}
+                status={formResponse.status}
+                onClose={setFormResponse}
+              />
               <Button label="Send" type="submit" />
             </div>
           </form>

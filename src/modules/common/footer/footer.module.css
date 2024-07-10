@@ -20,6 +20,10 @@
 .footer-address-wrapper {
   width: 60%;
 }
+.logo-img {
+  width: 3rem;
+  height: 3rem;
+}
 .footer-contacts-wrapper {
   justify-content: flex-start;
   gap: 10px;

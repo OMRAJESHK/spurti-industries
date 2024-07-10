@@ -39,9 +39,12 @@
   --card-rgb: 180, 185, 188;
   --card-border-rgb: 131, 134, 135;
 
-  --primary-color: #003366;
+  --primary-color: #fa6400;
   --light: #fff;
   --border: #2d2d2d;
+  --success: #5cb85c;
+  --danger: #ed5249;
+  --warning: #ffcc00;
 }
 
 @media (prefers-color-scheme: dark) {

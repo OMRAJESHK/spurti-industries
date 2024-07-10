@@ -4,3 +4,5 @@ export const pageRoutes = {
   products: "/productlist",
   contactus: "/contact-us",
 };
+export const localBaseURL = 'http://localhost:3000'
+export const ProdBaseURL = 'https://spurti-industries.vercel.app'
