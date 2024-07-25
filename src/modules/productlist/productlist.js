@@ -11,7 +11,6 @@ import CustomImage from "@/components/customImage";
 import ArrowLeft from "@/components/carousel/arrowLeft";
 import ArrowRight from "@/components/carousel/arrowRight";
 import { imageGallery } from "./data";
-import img2 from "../../asset/images/image-2.jpeg";
 
 const Productlist = () => {
   const [nav1, setNav1] = useState(null);
@@ -43,20 +42,6 @@ const Productlist = () => {
             ref={(slider) => (sliderRef1 = slider)}
             {...settings}
           >
-            {/* {imageGallery.map((imageItem) => (
-              <div
-                key={imageItem.id}
-                className={classes["product-main-img-wrapper"]}
-              >
-                <CustomImage
-                  src={img2}
-                  alt="logo"
-                  width={550}
-                  height={550}
-                  classProp={classes["product-img"]}
-                />
-              </div>
-            ))} */}
             {imageGallery.map((imageItem) => (
               <div
                 key={imageItem.id}
@@ -71,61 +56,6 @@ const Productlist = () => {
                 />
               </div>
             ))}
-
-            {/*<div className={classes["product-main-img-wrapper"]}>
-              <CustomImage
-                src={img1}
-                alt="logo"
-                width={550}
-                height={250}
-                classProp={classes["product-img"]}
-              />
-            </div>
-            <div className={classes["product-main-img-wrapper"]}>
-              <CustomImage
-                src={img2}
-                alt="logo"
-                width={550}
-                height={250}
-                classProp={classes["product-img"]}
-              />
-            </div>
-            <div className={classes["product-main-img-wrapper"]}>
-              <CustomImage
-                src={img3}
-                alt="logo"
-                width={550}
-                height={250}
-                classProp={classes["product-img"]}
-              />
-            </div>
-            <div className={classes["product-main-img-wrapper"]}>
-              <CustomImage
-                src={img4}
-                alt="logo"
-                width={550}
-                height={250}
-                classProp={classes["product-img"]}
-              />
-            </div>
-            <div className={classes["product-main-img-wrapper"]}>
-              <CustomImage
-                src={img5}
-                alt="logo"
-                width={550}
-                height={250}
-                classProp={classes["product-img"]}
-              />
-            </div>
-            <div className={classes["product-main-img-wrapper"]}>
-              <CustomImage
-                src={img6}
-                alt="logo"
-                width={550}
-                height={250}
-                classProp={classes["product-img"]}
-              />
-            </div> */}
           </Slider>
           <Slider
             asNavFor={nav1}
@@ -150,60 +80,6 @@ const Productlist = () => {
                 />
               </div>
             ))}
-            {/*<div className={classes["product-thumbnail-wrapper"]}>
-              <CustomImage
-                src={img1}
-                alt="logo"
-                width={100}
-                height={100}
-                classProp={classes["product-thumbnail-img"]}
-              />
-            </div>
-            <div className={classes["product-thumbnail-wrapper"]}>
-              <CustomImage
-                src={img2}
-                alt="logo"
-                width={100}
-                height={100}
-                classProp={classes["product-thumbnail-img"]}
-              />
-            </div>
-            <div className={classes["product-thumbnail-wrapper"]}>
-              <CustomImage
-                src={img3}
-                alt="logo"
-                width={100}
-                height={100}
-                classProp={classes["product-thumbnail-img"]}
-              />
-            </div>
-            <div className={classes["product-thumbnail-wrapper"]}>
-              <CustomImage
-                src={img4}
-                alt="logo"
-                width={100}
-                height={100}
-                classProp={classes["product-thumbnail-img"]}
-              />
-            </div>
-            <div className={classes["product-thumbnail-wrapper"]}>
-              <CustomImage
-                src={img5}
-                alt="logo"
-                width={100}
-                height={100}
-                classProp={classes["product-thumbnail-img"]}
-              />
-            </div>
-            <div className={classes["product-thumbnail-wrapper"]}>
-              <CustomImage
-                src={img6}
-                alt="logo"
-                width={100}
-                height={100}
-                classProp={classes["product-thumbnail-img"]}
-              />
-            </div> */}
           </Slider>
         </div>
       </Wrapper>
