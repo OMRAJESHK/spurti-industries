@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import CountUp from "react-countup";
 import CustomImage from "@/components/customImage";
 import Flexbox from "@/components/flexbox/flexbox";
@@ -10,12 +11,13 @@ const CounterWrapper = ({
   start = 0,
   end,
   duration,
+  classProp = "",
 }) => {
   return (
     <Flexbox
       flexDirection="row"
       alignItems="center"
-      classProp={classes["score-item-wrapper"]}
+      classProp={`${classes["score-item-wrapper"]} ${classProp ?? classProp}`}
     >
       <CustomImage src={src} classProp={classes["score-img"]} />
       <div>
@@ -30,6 +32,15 @@ const CounterWrapper = ({
       </div>
     </Flexbox>
   );
+};
+
+CounterWrapper.propTypes = {
+  src: PropTypes.string,
+  title: PropTypes.string,
+  start: PropTypes.number,
+  end: PropTypes.number,
+  duration: PropTypes.number,
+  classProp: PropTypes.string,
 };
 
 export default CounterWrapper;
