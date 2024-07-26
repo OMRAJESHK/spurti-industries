@@ -8,9 +8,8 @@ import ContactUs from "../common/contactUs/contactUs";
 import classes from "./productlist.module.css";
 
 import CustomImage from "@/components/customImage";
-import ArrowLeft from "@/components/carousel/arrowLeft";
-import ArrowRight from "@/components/carousel/arrowRight";
 import { imageGallery } from "./data";
+import Arrow from "@/components/carousel/arrow";
 
 const Productlist = () => {
   const [nav1, setNav1] = useState(null);
@@ -29,8 +28,8 @@ const Productlist = () => {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-    prevArrow: <ArrowLeft />,
-    nextArrow: <ArrowRight />,
+    prevArrow: <Arrow />,
+    nextArrow: <Arrow toRight />,
   };
 
   return (
@@ -63,8 +62,8 @@ const Productlist = () => {
             slidesToShow={5}
             swipeToSlide={true}
             focusOnSelect={true}
-            prevArrow={<ArrowLeft />}
-            nextArrow={<ArrowRight />}
+            prevArrow={<Arrow />}
+            nextArrow={<Arrow toRight />}
           >
             {imageGallery.map((imageItem) => (
               <div

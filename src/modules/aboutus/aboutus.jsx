@@ -9,6 +9,7 @@ import Flexbox from "@/components/flexbox/flexbox";
 import classes from "./aboutus.module.css";
 import { aboutusSection } from "./data";
 import ImgViewer from "./imgViewer";
+import { H2 } from "@/components/headings/headings";
 
 const Aboutus = () => {
   const [showCertificate, setShowCertificate] = useState(false);
@@ -21,7 +22,7 @@ const Aboutus = () => {
         classProp={classes["whychoose-wrapper"]}
       >
         <section className={classes["why-choose-section"]}>
-          <h2 className={classes["whoweare-title"]}>{aboutusSection.title}</h2>
+          <H2 className={classes["whoweare-title"]}>{aboutusSection.title}</H2>
           {["p1", "p2", "p3"].map((item) => (
             <p key={item}>{aboutusSection[item]}</p>
           ))}

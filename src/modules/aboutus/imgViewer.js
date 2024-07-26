@@ -3,13 +3,14 @@ import classes from "./aboutus.module.css";
 import Flexbox from "@/components/flexbox/flexbox";
 import CustomImage from "@/components/customImage";
 import lmscertificate from "../../asset/images/lms-certificate.jpg";
+import { H2 } from "@/components/headings/headings";
 
 const ImgViewer = ({ setShowCertificate }) => {
   return (
     <div className={classes["imgviewer-wrapper"]}>
       <div className={classes["imgviewer"]}>
         <Flexbox justifyContent="space-between" alignItems="center">
-          <h2>LMS Certified</h2>
+          <H2>LMS Certified</H2>
           <button onClick={() => setShowCertificate(false)}>&#x2716;</button>
         </Flexbox>
         <CustomImage

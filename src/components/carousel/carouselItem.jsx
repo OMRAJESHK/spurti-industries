@@ -1,10 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import CustomImage from "../customImage";
-import Button from "../button/button";
 import classes from "./carousel.module.css";
 import { useRouter } from "next/navigation";
 import { pageRoutes } from "@/routes/routes";
+import SliderTextWrapper from "./sliderTextWrapper";
 
 const CarouselItem = (props) => {
   const {
@@ -18,25 +18,22 @@ const CarouselItem = (props) => {
   const onKnoMoreClickHandler = () => {
     router.push(pageRoutes.aboutus, { scroll: false });
   };
+
   return (
     <div className={classes["slider-item-wrapper"]}>
-      <div className={classes["slider-img-wrapper"]}>
-        <div className={classes["overlay"]}>
-          <div className={classes["slider-text-wrapper"]}>
-            <div>
-              <h2 className={classes["slider-title"]}>{title}</h2>
-              <p className={classes["slider-text"]}>{text}</p>
-              {hasButton && (
-                <Button label={buttonLabel} onClick={onKnoMoreClickHandler} />
-              )}
-            </div>
-          </div>
-        </div>
+      <div>
+        <SliderTextWrapper
+          title={title}
+          text={text}
+          hasButton={hasButton}
+          buttonLabel={buttonLabel}
+          onClick={onKnoMoreClickHandler}
+        />
         <CustomImage
           src={image}
           alt="logo"
-          width={650}
-          height={650}
+          width={800}
+          height={800}
           classProp={classes["slider-img"]}
         />
       </div>

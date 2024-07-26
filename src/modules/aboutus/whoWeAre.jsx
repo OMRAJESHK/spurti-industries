@@ -7,6 +7,7 @@ import CustomImage from "@/components/customImage";
 import Wrapper from "../home/common/wrapper";
 import { certificateData } from "./data";
 import Card from "@/components/card/card";
+import { H2 } from "@/components/headings/headings";
 
 const WhoWeAre = ({ setShowCertificate }) => {
   const onCertificateClick = () => {
@@ -20,7 +21,7 @@ const WhoWeAre = ({ setShowCertificate }) => {
       >
         <div className={classes["why-choose-item-wrapper"]}>
           <section>
-            <h2>{certificateData.title}</h2>
+            <H2>{certificateData.title}</H2>
             <div className={classes["rewards-wrapper"]}>
               {certificateData.list.certificates.map((certificate) => (
                 <Card

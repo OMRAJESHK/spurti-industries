@@ -44,7 +44,6 @@ function RootLayout({ children }) {
 
       <body className={montserrat.className}>
         <SocialMedia />
-        {/* <Navbar /> */}
         <Navbar />
         <main className={classess.main}>{children}</main>
       </body>

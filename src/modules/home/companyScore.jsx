@@ -13,15 +13,11 @@ const CompanyScore = () => {
         justifyContent="space-around"
         classProp={classes["company-scorelist-wrapper"]}
       >
-        {companyScoreList.map(({ id, title, start, end, duration, src }) => (
+        {companyScoreList.map((companyScore) => (
           <CounterWrapper
+            key={companyScore.id}
             classProp={classes["score-counter"]}
-            key={id}
-            start={start}
-            end={end}
-            duration={duration}
-            src={src}
-            title={title}
+            {...companyScore}
           />
         ))}
       </Flexbox>

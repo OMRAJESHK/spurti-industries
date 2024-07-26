@@ -6,11 +6,12 @@ import ContactUs from "../common/contactUs/contactUs";
 import Carousel from "@/components/carousel/carousel";
 import Footer from "../common/footer/footer";
 import Copyrights from "../common/copyrights";
+import { carousels } from "@/components/carousel/constants";
 
 const Home = () => {
   return (
     <div className={classess["home-wrapper"]}>
-      <Carousel />
+      <Carousel slides={carousels} />
       <AboutCompany />
       <CompanyScore />
       <ContactUs />

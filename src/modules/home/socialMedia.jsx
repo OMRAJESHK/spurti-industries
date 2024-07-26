@@ -13,19 +13,19 @@ const SocialMedia = () => {
       classProp={classes["socialmedia-wrapper"]}
     >
       <div>
-        <p className={classes["socialmedia-text"]}>
+        <article className={classes["socialmedia-text"]}>
           <span>
             <CustomImage src={mailIcon} classProp={classes["card-img"]} />
           </span>
           spurthi_industries2003@yahoo.co.in
-        </p>
+        </article>
       </div>
-      <p className={classes["socialmedia-text"]}>
+      <article className={classes["socialmedia-text"]}>
         <span>
           <CustomImage src={phoneIcon} classProp={classes["card-img"]} />
         </span>
         +91 9844130388
-      </p>
+      </article>
     </Flexbox>
   );
 };

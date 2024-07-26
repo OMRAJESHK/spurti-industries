@@ -8,7 +8,7 @@
 .about-image-wrapper {
   flex-basis: 100%;
 }
-.about-description-img {
+.about-image-wrapper img {
   width: 100%;
   height: 23rem;
   object-fit: cover;
@@ -19,47 +19,20 @@
   flex-basis: 100%;
   text-align: justify;
 }
-.about-description-title {
+.about-description-wrapper h1 {
   color: var(--primary-color);
   margin-bottom: 1.5rem;
   text-align: left;
 }
-.about-description-text {
+.about-description-wrapper p {
   font-size: 16px;
   margin-bottom: 1.5rem;
   text-indent: 3rem;
 }
-.about-know-more-button {
+.about-description-wrapper button {
   width: 10rem;
   letter-spacing: 1px;
 }
-
-/* 
-  CSS Solution
-  @property --num {
-  syntax: "<integer>";
-  initial-value: 0;
-  inherits: false;
-}
-
-.div {
-  animation: counter 5s infinite alternate ease-in-out;
-  counter-reset: num var(--num);
-  transition: --num 5s;
-}
-
-.div::after {
-  content: counter(num);
-}
-
-@keyframes counter {
-  from {
-    --num: 0;
-  }
-  to {
-    --num: 100;
-  }
-} */
 
 .counter {
   font-size: 1.5rem;
@@ -77,7 +50,7 @@
 .score-item-wrapper {
   width: fit-content;
 }
-.score-item-wrapper div{
+.score-item-wrapper div {
   margin-left: 10px;
 }
 .company-scorelist-wrapper {

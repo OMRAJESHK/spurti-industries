@@ -10,6 +10,7 @@ import Textarea from "@/components/input/textarea";
 import Button from "@/components/button/button";
 import Notification from "./notification";
 import { ProdBaseURL } from "@/routes/routes";
+import { H2 } from "@/components/headings/headings";
 
 const INITIAL_STATE = { name: "", email: "", message: "" };
 
@@ -38,9 +39,9 @@ const ContactUs = () => {
     <Wrapper>
       <Flexbox gap={0} justifyContent="space-between">
         <div className={classes["contactus-form-wrapper"]}>
-          <h2 className={classes["contactus-title"]}>
+          <H2 className={classes["contactus-title"]}>
             Contact Us for any Queries
-          </h2>
+          </H2>
           <form onSubmit={onSubmitHandler}>
             <Input
               label="Name :"
